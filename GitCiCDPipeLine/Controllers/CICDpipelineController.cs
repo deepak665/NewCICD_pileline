@@ -13,4 +13,5 @@ namespace GitCiCDPipeLine.Controllers
             return Ok("Hello from GetNewDetails");
         }
     }
+    // this is test case for git ci cd pipeline
 }
