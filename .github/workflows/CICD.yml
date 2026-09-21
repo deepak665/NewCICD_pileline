@@ -1,0 +1,17 @@
+name: CICD pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  first-jobs:
+    run-on ubuntu-latest
+
+
+    steps:
+    -name:checkout source code
+    uses:action/checkout@v4
+
+    -name:Hello Githb Actions
+     run: echo "CI Pipeline is working successfully!"
+  
