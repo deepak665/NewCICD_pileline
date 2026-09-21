@@ -5,13 +5,11 @@ on:
 
 jobs:
   first-jobs:
-    run-on ubuntu-latest
-
+    runs-on: ubuntu-latest
 
     steps:
-    -name:checkout source code
-    uses:action/checkout@v4
+      - name: Checkout source code
+        uses: actions/checkout@v4
 
-    -name:Hello Githb Actions
-     run: echo "CI Pipeline is working successfully!"
-  
+      - name: Hello GitHub Actions
+        run: echo "CI Pipeline is working successfully!"
