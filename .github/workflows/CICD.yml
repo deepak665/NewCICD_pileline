@@ -2,8 +2,6 @@ name: CICD pipeline
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
 
 jobs:
   first-jobs:
@@ -13,5 +11,10 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
 
-      - name: Hello GitHub Actions
-        run: echo "CI Pipeline is working successfully!"
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Check .NET version
+        run: dotnet --version
