@@ -12,6 +12,13 @@ namespace GitCiCDPipeLine.Controllers
         {
             return Ok("Hello from GetNewDetails");
         }
-    }
+    
     // this is test case for git ci cd pipeline
+
+    [HttpGet("Test")]
+        public IActionResult Test()
+        {
+            return Ok("Hello from Test");
+        }
+    }
 }
